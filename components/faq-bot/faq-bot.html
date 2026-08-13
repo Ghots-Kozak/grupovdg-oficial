@@ -1,0 +1,35 @@
+<!-- FAQ Bot Component HTML -->
+<div class="faq-bot-container" id="faqBotContainer">
+    <!-- Bubble -->
+    <button class="faq-bot-bubble" id="faqBotBubble" aria-label="Abrir preguntas frecuentes">
+        <i class="ph-bold ph-chat-teardrop-text"></i>
+        <span class="faq-bot-indicator"></span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="faq-bot-window" id="faqBotWindow" style="display: none;">
+        <!-- Header -->
+        <div class="faq-bot-header">
+            <div class="faq-bot-header-info">
+                <strong>GRUPO VDG</strong>
+                <span>Asistente FAQ</span>
+            </div>
+            <button class="faq-bot-close" id="faqBotClose" aria-label="Cerrar preguntas frecuentes">
+                <i class="ph-bold ph-x"></i>
+            </button>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="faq-bot-messages" id="faqBotMessages">
+            <!-- Messages will be injected by JavaScript -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="faq-bot-input-area">
+            <input type="text" id="faqBotInput" placeholder="Escribe el número de tu pregunta..." aria-label="Número de pregunta">
+            <button id="faqBotSend" aria-label="Enviar">
+                <i class="ph-bold ph-paper-plane-right"></i>
+            </button>
+        </div>
+    </div>
+</div>

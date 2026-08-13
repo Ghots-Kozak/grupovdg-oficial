@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Animaciones Globales y Clases de Utilidad
+   ========================================================================== */
+
+/* Estados iniciales para elementos observados */
+.fade-in,
+.slide-up,
+.slide-left,
+.slide-right,
+.scale-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.slide-up {
+    transform: translateY(40px);
+}
+
+.slide-left {
+    transform: translateX(40px);
+}
+
+.slide-right {
+    transform: translateX(-40px);
+}
+
+.scale-in {
+    transform: scale(0.9);
+}
+
+/* Estados cuando son visibles */
+.is-visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Retrasos para efectos en cascada */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* ==========================================================================
+   Keyframes para efectos continuos
+   ========================================================================== */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(11, 92, 171, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(11, 92, 171, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(11, 92, 171, 0); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* ==========================================================================
+   Partículas Tecnológicas Azules
+   ========================================================================== */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    bottom: -10px;
+    background-color: var(--color-accent);
+    opacity: 0.35;
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--color-accent);
+    animation: floatUpParticle 20s infinite linear;
+}
+
+@keyframes floatUpParticle {
+    0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.45;
+    }
+    90% {
+        opacity: 0.25;
+    }
+    100% {
+        transform: translate(var(--move-x), -1000px) scale(1.5);
+        opacity: 0;
+    }
+}
