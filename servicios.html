@@ -8,6 +8,19 @@
     <meta name="description"
         content="Conoce nuestras soluciones tecnológicas: Desarrollo de Software, Consultoría, Seguridad, Ciberseguridad e Inteligencia Artificial.">
 
+    <!-- Favicon e Iconos de Aplicación -->
+    <link rel="icon" type="image/png" href="./assets/images/IconoLogo.png">
+    <link rel="apple-touch-icon" href="./assets/images/IconoLogo.png">
+
+    <!-- Open Graph / SEO Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.grupovdg.com/servicios.html">
+    <meta property="og:title" content="Servicios | GRUPO VDG">
+    <meta property="og:description" content="Conoce nuestras soluciones tecnológicas: Desarrollo de Software, Consultoría, Seguridad, Ciberseguridad e Inteligencia Artificial.">
+    <meta property="og:image" content="https://www.grupovdg.com/assets/images/IconoLogo.png">
+    <meta property="og:site_name" content="GRUPO VDG">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -19,9 +32,36 @@
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/servicios.css">
-    
+
     <!-- FAQ Bot -->
     <link rel="stylesheet" href="./components/faq-bot/faq-bot.css">
+
+    <!-- Datos Estructurados / Schema Markup para Google Knowledge Graph -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GRUPO VDG",
+        "alternateName": ["Grupo VDG", "VDG", "GrupoVDG"],
+        "url": "https://www.grupovdg.com/",
+        "logo": "https://www.grupovdg.com/assets/images/IconoLogo.png",
+        "description": "Firma tecnológica especializada en desarrollo de software a la medida, ciberseguridad, integración de inteligencia artificial y automatización de procesos empresariales.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+52-56-5986-5944",
+          "contactType": "customer service",
+          "email": "victor.castro@grupovdg.com",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/grupovdg",
+          "https://twitter.com/grupovdg"
+        ]
+      }
+    ]
+    </script>
 </head>
 
 <body>
@@ -39,7 +79,7 @@
         </div>
         <div class="container header__nav">
             <a href="./index.html" class="header__logo">
-                <img src="./assets/images/LOGO.jpeg" alt="GRUPO VDG" class="brand-image">
+                <img src="./assets/images/IconoLogo.png" alt="GRUPO VDG" class="brand-image">
             </a>
 
             <div class="header__toggle">
@@ -59,19 +99,21 @@
     <main>
         <!-- SECCIÓN 1: PAGE HERO -->
         <section class="page-header section-padding">
-            <div class="container text-center">
+            <div class="container">
                 <h1 class="slide-up">PORTAFOLIO DE <span class="text-gradient">SERVICIOS</span></h1>
                 <p class="slide-up delay-100 subtitle" style="max-width: 700px; margin: 1rem auto;">
-                    Transformamos la complejidad técnica en ventaja competitiva a través de nuestro portafolio de servicios integrales para empresas que buscan escalar.
+                    Transformamos la complejidad técnica en ventaja competitiva a través de nuestro portafolio de
+                    servicios integrales para empresas que buscan escalar.
                 </p>
-                <div class="text-center slide-up delay-200 mt-4">
-                    <a href="#software" class="btn btn-secondary">Explorar portafolio <i class="ph ph-arrow-down"></i></a>
+                <div class="slide-up delay-200 mt-4">
+                    <a href="#software" class="btn btn-secondary">Explorar portafolio <i
+                            class="ph ph-arrow-down"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 2: DESARROLLO DE SOFTWARE -->
-        <section id="software" class="service-detail section-padding alt-bg">
+        <section id="software" class="service-detail section-padding bg-surface">
             <div class="container service-detail__grid">
                 <div class="service-detail__visual slide-right">
                     <div class="visual-placeholder">
@@ -80,41 +122,46 @@
                     </div>
                 </div>
                 <div class="service-detail__content slide-left">
-                    <h2>Desarrollo de <span class="text-gradient">Software</span></h2>
-                    <p>Aplicaciones web, sistemas empresariales y soluciones digitales personalizadas. Diseñamos arquitectura de software robusta, escalable y mantenible.</p>
+                    <h2 class="animated-heading">Desarrollo de <span class="text-gradient">Software</span></h2>
+                    <p>Aplicaciones web, sistemas empresariales y soluciones digitales personalizadas. Diseñamos
+                        arquitectura de software robusta, escalable y mantenible.</p>
                     <ul class="service-features">
                         <li><i class="ph-fill ph-check-circle"></i> Desarrollo de Sistemas Core</li>
                         <li><i class="ph-fill ph-check-circle"></i> Aplicaciones Web y Móviles</li>
                         <li><i class="ph-fill ph-check-circle"></i> Modernización de Software Legacy</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary mt-4">Solicitar cotización <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary mt-4">Solicitar cotización <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 3: CONSULTORÍA TECNOLÓGICA -->
-        <section class="service-detail section-padding">
+        <section class="service-detail section-padding bg-white">
             <div class="container service-detail__grid reverse-layout">
                 <div class="service-detail__content slide-right">
-                    <h2>Consultoría <span class="text-gradient">Tecnológica</span></h2>
-                    <p>Arquitectura, estrategia y transformación tecnológica. Te acompañamos en cada etapa de la evolución digital de tu negocio, asegurando que cada inversión tecnológica tenga un retorno claro.</p>
+                    <h2 class="animated-heading">Consultoría <span class="text-gradient">Tecnológica</span></h2>
+                    <p>Arquitectura, estrategia y transformación tecnológica. Te acompañamos en cada etapa de la
+                        evolución digital de tu negocio, asegurando que cada inversión tecnológica tenga un retorno
+                        claro.</p>
                     <ul class="service-features">
                         <li><i class="ph-fill ph-check-circle"></i> Auditoría de Arquitectura</li>
                         <li><i class="ph-fill ph-check-circle"></i> Roadmap de Transformación Digital</li>
                         <li><i class="ph-fill ph-check-circle"></i> Optimización de Procesos IT</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary mt-4">Agendar sesión consultiva <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary mt-4">Agendar sesión consultiva <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
                 <div class="service-detail__visual slide-left">
                     <div class="visual-placeholder cube">
-                        <i class="ph-duotone ph-strategy" style="font-size: 5rem; color: var(--color-primary);"></i>
+                        <i class="ph-duotone ph-lightbulb-filament"></i>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 4: SEGURIDAD DE LA INFORMACIÓN -->
-        <section class="service-detail section-padding alt-bg">
+        <section class="service-detail section-padding bg-dark">
             <div class="container service-detail__grid">
                 <div class="service-detail__visual slide-right">
                     <div class="visual-placeholder shield">
@@ -123,30 +170,35 @@
                     </div>
                 </div>
                 <div class="service-detail__content slide-left">
-                    <h2>Seguridad de la <span class="text-gradient">Información</span></h2>
-                    <p>Protección integral de información y activos digitales críticos. Garantizamos la confidencialidad, integridad y disponibilidad de tus datos corporativos bajo estándares internacionales.</p>
+                    <h2 class="animated-heading">Seguridad de la <span class="text-gradient">Información</span></h2>
+                    <p>Protección integral de información y activos digitales críticos. Garantizamos la
+                        confidencialidad, integridad y disponibilidad de tus datos corporativos bajo estándares
+                        internacionales.</p>
                     <ul class="service-features">
                         <li><i class="ph-fill ph-check-circle"></i> Políticas y Gobierno de Datos</li>
                         <li><i class="ph-fill ph-check-circle"></i> Cumplimiento Normativo</li>
                         <li><i class="ph-fill ph-check-circle"></i> Arquitectura Segura por Diseño</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary mt-4">Auditar nuestra seguridad <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary mt-4">Auditar nuestra seguridad <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 5: CIBERSEGURIDAD AVANZADA -->
-        <section class="service-detail section-padding">
+        <section class="service-detail section-padding bg-surface">
             <div class="container service-detail__grid reverse-layout">
                 <div class="service-detail__content slide-right">
-                    <h2>Ciberseguridad <span class="text-gradient">Avanzada</span></h2>
-                    <p>Prevención, detección y respuesta proactiva ante amenazas digitales en tiempo real. Actuamos antes de que las vulnerabilidades se conviertan en incidentes operativos o financieros.</p>
+                    <h2 class="animated-heading">Ciberseguridad <span class="text-gradient">Avanzada</span></h2>
+                    <p>Prevención, detección y respuesta proactiva ante amenazas digitales en tiempo real. Actuamos
+                        antes de que las vulnerabilidades se conviertan en incidentes operativos o financieros.</p>
                     <ul class="service-features">
                         <li><i class="ph-fill ph-check-circle"></i> Pentesting y Hacking Ético</li>
                         <li><i class="ph-fill ph-check-circle"></i> Respuesta a Incidentes (IR)</li>
                         <li><i class="ph-fill ph-check-circle"></i> Monitoreo Continuo (SOC)</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary mt-4">Proteger nuestra infraestructura <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary mt-4">Proteger nuestra infraestructura <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
                 <div class="service-detail__visual slide-left">
                     <div class="visual-placeholder radar">
@@ -158,7 +210,7 @@
         </section>
 
         <!-- SECCIÓN 6: INTELIGENCIA ARTIFICIAL -->
-        <section class="service-detail section-padding alt-bg">
+        <section class="service-detail section-padding bg-white">
             <div class="container service-detail__grid">
                 <div class="service-detail__visual slide-right">
                     <div class="visual-placeholder neural">
@@ -167,30 +219,34 @@
                     </div>
                 </div>
                 <div class="service-detail__content slide-left">
-                    <h2>Inteligencia <span class="text-gradient">Artificial</span></h2>
-                    <p>Automatización y modelos inteligentes. Implementamos soluciones que aprenden y evolucionan con tu negocio, optimizando decisiones, proyecciones y eficiencia operativa a gran escala.</p>
+                    <h2 class="animated-heading">Inteligencia <span class="text-gradient">Artificial</span></h2>
+                    <p>Automatización y modelos inteligentes. Implementamos soluciones que aprenden y evolucionan con tu
+                        negocio, optimizando decisiones, proyecciones y eficiencia operativa a gran escala.</p>
                     <ul class="service-features">
                         <li><i class="ph-fill ph-check-circle"></i> Modelos Predictivos (Machine Learning)</li>
                         <li><i class="ph-fill ph-check-circle"></i> Procesamiento de Lenguaje Natural (NLP)</li>
                         <li><i class="ph-fill ph-check-circle"></i> Análisis de Datos con IA</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary mt-4">Implementar IA <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary mt-4">Implementar IA <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 7: AGENTES DE IA -->
-        <section class="service-detail section-padding">
+        <section class="service-detail section-padding bg-surface">
             <div class="container service-detail__grid reverse-layout">
                 <div class="service-detail__content slide-right">
-                    <h2>Agentes de <span class="text-gradient">IA Autónomos</span></h2>
-                    <p>Llevamos la IA un paso más allá creando agentes virtuales capaces de razonar, utilizar herramientas y ejecutar flujos de trabajo complejos de manera autónoma las 24 horas del día.</p>
+                    <h2 class="animated-heading">Agentes de <span class="text-gradient">IA Autónomos</span></h2>
+                    <p>Llevamos la IA un paso más allá creando agentes virtuales capaces de razonar, utilizar
+                        herramientas y ejecutar flujos de trabajo complejos de manera autónoma las 24 horas del día.</p>
                     <ul class="service-features">
                         <li><i class="ph-fill ph-check-circle"></i> Agentes de Atención al Cliente Inteligentes</li>
                         <li><i class="ph-fill ph-check-circle"></i> Automatización Cognitiva de Procesos</li>
                         <li><i class="ph-fill ph-check-circle"></i> Integración de Agentes con Sistemas ERP/CRM</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary mt-4">Diseñar un Agente Inteligente <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary mt-4">Diseñar un Agente Inteligente <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
                 <div class="service-detail__visual slide-left">
                     <div class="visual-placeholder radar">
@@ -202,10 +258,13 @@
         </section>
 
         <!-- SECCIÓN 8: SELECTOR / CTA FINAL -->
-        <section class="global-cta section-padding alt-bg slide-up">
-            <div class="container text-center">
-                <h2>¿QUÉ TIPO DE SOLUCIÓN <span class="text-gradient">NECESITAS</span>?</h2>
-                <p style="margin-bottom: 2rem; color: var(--color-text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">Nuestro equipo de consultoría técnica está listo para evaluar tu escenario y recomendarte el mejor camino a seguir.</p>
+        <section class="global-cta section-padding bg-white slide-up">
+            <div class="container">
+                <h2 class="animated-heading">¿QUÉ TIPO DE SOLUCIÓN <span class="text-gradient">NECESITAS</span>?</h2>
+                <p
+                    style="margin-bottom: 2rem; color: var(--color-text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Nuestro equipo de consultoría técnica está listo para evaluar tu escenario y recomendarte el mejor
+                    camino a seguir.</p>
                 <div class="cta-premium-grid">
                     <a href="contacto.html?service=software" class="cta-premium-card slide-up delay-100">
                         <i class="ph-duotone ph-code"></i>
@@ -230,7 +289,7 @@
                 <!-- Columna 1: Branding y Social Proof -->
                 <div class="footer__brand">
                     <a href="./index.html" class="header__logo">
-                        <img src="./assets/images/LOGO.jpeg" alt="GRUPO VDG" class="brand-image footer-brand-image">
+                        <img src="./assets/images/IconoLogo.png" alt="GRUPO VDG" class="brand-image footer-brand-image">
                     </a>
                     <p class="footer__tagline">Soluciones tecnológicas para construir el futuro digital.</p>
                     <div class="footer__social">
@@ -267,14 +326,15 @@
                 <!-- Columna 4: Contacto & Insights -->
                 <div class="footer__col">
                     <h4 class="footer__title">Contacto & Insights</h4>
-                    
+
                     <!-- Newsletter -->
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Recibe insights tecnológicos</p>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Recibe insights
+                        tecnológicos</p>
                     <form class="footer__newsletter" onsubmit="event.preventDefault();">
                         <input type="email" placeholder="Tu correo electrónico" required>
                         <button type="submit"><i class="ph ph-paper-plane-right"></i></button>
                     </form>
-                    
+
                     <!-- Contacto Rápido -->
                     <div class="footer__links" style="margin-top: 1rem;">
                         <a href="./contacto.html"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a>
@@ -282,7 +342,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Bottom Bar: Copyright & Legal -->
             <div class="footer__bottom">
                 <p>© 2026 GRUPO VDG. Todos los derechos reservados.</p>
@@ -298,8 +358,9 @@
     <script src="./js/navigation.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/servicios.js"></script>
-    
+
     <!-- FAQ Bot Component -->
     <script src="./components/faq-bot/faq-bot.js"></script>
 </body>
+
 </html>

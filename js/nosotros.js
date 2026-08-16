@@ -12,6 +12,11 @@ function initConstellation() {
     const canvas = document.getElementById('constellation-canvas');
     if (!canvas) return;
 
+    // Accesibilidad: Abortar si el usuario prefiere movimiento reducido
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return; 
+    }
+
     const ctx = canvas.getContext('2d');
     
     let width = canvas.width = canvas.parentElement.offsetWidth;
@@ -36,7 +41,26 @@ function initConstellation() {
         });
     }
 
+    let isVisible = false;
+    let animationFrameId;
+
+    // Observador para detener el cálculo del CPU si no se ve en pantalla
+    const canvasObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            isVisible = entry.isIntersecting;
+            if (isVisible) {
+                draw(); // Reanuda la animación
+            } else {
+                cancelAnimationFrame(animationFrameId); // Pausa la animación
+            }
+        });
+    }, { threshold: 0 }); // Se activa apenas el canvas entra/sale 1 pixel del viewport
+    
+    canvasObserver.observe(canvas);
+
     function draw() {
+        if (!isVisible) return;
+
         ctx.clearRect(0, 0, width, height);
         
         ctx.fillStyle = 'rgba(10, 77, 255, 0.5)';
@@ -79,8 +103,6 @@ function initConstellation() {
             }
         }
 
-        requestAnimationFrame(draw);
+        animationFrameId = requestAnimationFrame(draw);
     }
-
-    draw();
 }

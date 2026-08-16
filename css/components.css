@@ -16,12 +16,12 @@
 .btn-primary {
     background-color: var(--color-primary);
     color: white;
-    box-shadow: 0 4px 14px rgba(11, 92, 171, 0.2);
+    box-shadow: 0 4px 14px rgba(var(--color-primary-rgb), 0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(11, 92, 171, 0.4);
+    box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.4);
     background-color: var(--color-accent);
 }
 
@@ -417,7 +417,6 @@
    CTA Contacto Global (Sección final antes del footer)
    ========================================================================== */
 .global-cta {
-    background-color: var(--color-surface);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -431,7 +430,7 @@
     transform: translateX(-50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(11, 92, 171, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -480,22 +479,22 @@
    Brand Logos (Image - Pill Corporativo)
    ========================================================================== */
 .brand-image {
-    background: #FFFFFF;
-    padding: 4px 12px;
-    border-radius: 6px;
-    max-height: 35px;
+    background: transparent; /* Se elimina el fondo blanco forzado para aprovechar el PNG transparente */
+    padding: 0; 
+    border-radius: 0;
+    max-height: 55px; /* Aumento significativo de tamaño (antes 35px) */
     width: auto;
     object-fit: contain;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
 }
 
 .header__logo:hover .brand-image {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 12px rgba(11, 92, 171, 0.2)); /* Sombra adaptada a logo transparente */
 }
 
 .footer-brand-image {
-    max-height: 45px;
-    margin-bottom: 0.5rem;
+    max-height: 65px; /* Aumento de tamaño (antes 45px) */
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
 }

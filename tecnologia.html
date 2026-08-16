@@ -8,6 +8,19 @@
     <meta name="description"
         content="Conoce nuestro ecosistema tecnológico de Inteligencia Artificial, Automatización, APIs y Ciberseguridad.">
 
+    <!-- Favicon e Iconos de Aplicación -->
+    <link rel="icon" type="image/png" href="./assets/images/IconoLogo.png">
+    <link rel="apple-touch-icon" href="./assets/images/IconoLogo.png">
+
+    <!-- Open Graph / SEO Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.grupovdg.com/tecnologia.html">
+    <meta property="og:title" content="Soluciones Tecnológicas | GRUPO VDG">
+    <meta property="og:description" content="Conoce nuestro ecosistema tecnológico de Inteligencia Artificial, Automatización, APIs y Ciberseguridad.">
+    <meta property="og:image" content="https://www.grupovdg.com/assets/images/IconoLogo.png">
+    <meta property="og:site_name" content="GRUPO VDG">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -19,9 +32,36 @@
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/tecnologia.css">
-    
+
     <!-- FAQ Bot -->
     <link rel="stylesheet" href="./components/faq-bot/faq-bot.css">
+
+    <!-- Datos Estructurados / Schema Markup para Google Knowledge Graph -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GRUPO VDG",
+        "alternateName": ["Grupo VDG", "VDG", "GrupoVDG"],
+        "url": "https://www.grupovdg.com/",
+        "logo": "https://www.grupovdg.com/assets/images/IconoLogo.png",
+        "description": "Firma tecnológica especializada en desarrollo de software a la medida, ciberseguridad, integración de inteligencia artificial y automatización de procesos empresariales.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+52-56-5986-5944",
+          "contactType": "customer service",
+          "email": "victor.castro@grupovdg.com",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/grupovdg",
+          "https://twitter.com/grupovdg"
+        ]
+      }
+    ]
+    </script>
 </head>
 
 <body>
@@ -39,7 +79,7 @@
         </div>
         <div class="container header__nav">
             <a href="./index.html" class="header__logo">
-                <img src="./assets/images/LOGO.jpeg" alt="GRUPO VDG" class="brand-image">
+                <img src="./assets/images/IconoLogo.png" alt="GRUPO VDG" class="brand-image">
             </a>
 
             <div class="header__toggle">
@@ -58,87 +98,88 @@
 
     <main>
         <!-- SECCIÓN 1: HERO -->
-        <section class="page-header text-center section-padding">
+        <section class="page-header section-padding">
             <div class="container">
                 <h1 class="slide-up">ECOSISTEMA <span class="text-gradient">TECNOLÓGICO</span></h1>
-                <p class="slide-up delay-100 subtitle" style="max-width: 600px; margin: 1rem auto;">Integramos las mejores herramientas, arquitecturas y estándares globales para construir soluciones digitales resilientes y escalables.</p>
-                <div class="text-center slide-up delay-200 mt-4">
-                    <a href="#ecosistema" class="btn btn-secondary">Descubrir ecosistema <i class="ph ph-arrow-down"></i></a>
+                <p class="slide-up delay-100 subtitle" style="max-width: 600px; margin: 1rem auto;">Integramos las
+                    mejores herramientas, arquitecturas y estándares globales para construir soluciones digitales
+                    resilientes y escalables.</p>
+                <div class="slide-up delay-200 mt-4">
+                    <a href="#ecosistema" class="btn btn-secondary">Descubrir ecosistema <i
+                            class="ph ph-arrow-down"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 2: ECOSISTEMA (Visual) -->
-        <section id="ecosistema" class="ecosystem-section alt-bg section-padding">
+        <section id="ecosistema" class="ecosystem-section bg-surface section-padding">
             <div class="container">
-                <h2 class="text-center slide-up mb-4" style="margin-bottom: 3rem;">Nuestra <span class="text-gradient">Infraestructura</span> Base</h2>
-                <div class="sequence-container slide-up delay-200">
-                    <div class="sequence-card">
+                <h2 class="animated-heading mb-4" style="margin-bottom: 3rem;">Nuestra <span
+                        class="text-gradient">Infraestructura</span> Base</h2>
+                <div class="infra-grid slide-up delay-200">
+                    <div class="infra-card">
                         <i class="ph-fill ph-hexagon text-gradient"></i>
                         <span>CORE</span>
-                        <p>Motor de reglas de negocio</p>
+                        <p>Motor de reglas</p>
                     </div>
-                    <div class="sequence-arrow"><i class="ph ph-arrow-right"></i></div>
-                    
-                    <div class="sequence-card">
+
+                    <div class="infra-card">
                         <i class="ph-duotone ph-brain"></i>
                         <span>IA</span>
-                        <p>Modelos y agentes cognitivos</p>
+                        <p>Agentes cognitivos</p>
                     </div>
-                    <div class="sequence-arrow"><i class="ph ph-arrow-right"></i></div>
-                    
-                    <div class="sequence-card">
+
+                    <div class="infra-card">
                         <i class="ph-duotone ph-database"></i>
                         <span>Data</span>
-                        <p>Gobierno de información</p>
+                        <p>Gobierno de info</p>
                     </div>
-                    <div class="sequence-arrow"><i class="ph ph-arrow-right"></i></div>
-                    
-                    <div class="sequence-card">
+
+                    <div class="infra-card">
                         <i class="ph-duotone ph-code"></i>
                         <span>Software</span>
-                        <p>Interfaces y aplicaciones</p>
+                        <p>Aplicaciones</p>
                     </div>
-                    <div class="sequence-arrow"><i class="ph ph-arrow-right"></i></div>
 
-                    <div class="sequence-card">
+                    <div class="infra-card">
                         <i class="ph-duotone ph-cloud"></i>
                         <span>Cloud</span>
-                        <p>Despliegue escalable</p>
+                        <p>Escalabilidad</p>
                     </div>
-                    <div class="sequence-arrow"><i class="ph ph-arrow-right"></i></div>
-                    
-                    <div class="sequence-card">
+
+                    <div class="infra-card">
                         <i class="ph-duotone ph-shield-check"></i>
                         <span>Seguridad</span>
-                        <p>Arquitectura Zero Trust</p>
+                        <p>Zero Trust</p>
                     </div>
-                    <div class="sequence-arrow"><i class="ph ph-arrow-right"></i></div>
-                    
-                    <div class="sequence-card">
+
+                    <div class="infra-card">
                         <i class="ph-duotone ph-plugs-connected"></i>
                         <span>APIs</span>
-                        <p>Integración con terceros</p>
+                        <p>Integraciones</p>
                     </div>
                 </div>
-                <div class="text-center slide-up delay-300" style="margin-top: 3rem;">
-                    <a href="./contacto.html" class="btn btn-secondary">Arquitectar mi solución <i class="ph ph-arrow-right"></i></a>
+                <div class="slide-up delay-300" style="margin-top: 3rem;">
+                    <a href="./contacto.html" class="btn btn-secondary">Arquitectar mi solución <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 3: SOFTWARE Y FRONTEND -->
-        <section class="tech-detail section-padding">
+        <section class="tech-detail section-padding bg-white">
             <div class="container tech-detail__grid">
                 <div class="slide-right tech-detail__content">
-                    <h2>Software a la <span class="text-gradient">Medida</span></h2>
-                    <p>Interfaces rápidas, arquitecturas modernas y sistemas creados específicamente para tu modelo de negocio, priorizando la experiencia del usuario y el rendimiento extremo.</p>
+                    <h2 class="animated-heading">Software a la <span class="text-gradient">Medida</span></h2>
+                    <p>Interfaces rápidas, arquitecturas modernas y sistemas creados específicamente para tu modelo de
+                        negocio, priorizando la experiencia del usuario y el rendimiento extremo.</p>
                     <ul class="tech-features">
                         <li><i class="ph-fill ph-check-circle"></i> Single Page Applications (SPA)</li>
                         <li><i class="ph-fill ph-check-circle"></i> Progressive Web Apps (PWA)</li>
                         <li><i class="ph-fill ph-check-circle"></i> Micro-frontends empresariales</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary">Desarrollar mi App <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary">Desarrollar mi App <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
                 <div class="slide-left visual-panel">
                     <i class="ph-duotone ph-browsers"></i>
@@ -147,36 +188,40 @@
         </section>
 
         <!-- SECCIÓN 4: INTELIGENCIA ARTIFICIAL -->
-        <section class="tech-detail section-padding alt-bg">
+        <section class="tech-detail section-padding bg-dark">
             <div class="container tech-detail__grid">
                 <div class="slide-right visual-panel">
                     <i class="ph-duotone ph-cpu"></i>
                 </div>
                 <div class="slide-left tech-detail__content">
-                    <h2>Modelos de <span class="text-gradient">Inteligencia Artificial</span></h2>
-                    <p>Integración de Large Language Models (LLMs), visión computacional y análisis predictivo para transformar datos en conocimiento accionable.</p>
+                    <h2 class="animated-heading">Modelos de <span class="text-gradient">Inteligencia Artificial</span></h2>
+                    <p>Integración de Large Language Models (LLMs), visión computacional y análisis predictivo para
+                        transformar datos en conocimiento accionable.</p>
                     <ul class="tech-features">
                         <li><i class="ph-fill ph-check-circle"></i> Fine-tuning de LLMs</li>
                         <li><i class="ph-fill ph-check-circle"></i> Análisis predictivo de datos</li>
                         <li><i class="ph-fill ph-check-circle"></i> Sistemas RAG (Retrieval-Augmented Generation)</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary">Explorar uso de IA <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary">Explorar uso de IA <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 5: AGENTES INTELIGENTES -->
-        <section class="tech-detail section-padding">
+        <section class="tech-detail section-padding bg-surface">
             <div class="container tech-detail__grid">
                 <div class="slide-right tech-detail__content">
-                    <h2>Agentes de <span class="text-gradient">IA Autónomos</span></h2>
-                    <p>Construimos agentes virtuales capaces de planificar, usar herramientas externas y ejecutar flujos complejos sin supervisión humana constante.</p>
+                    <h2 class="animated-heading">Agentes de <span class="text-gradient">IA Autónomos</span></h2>
+                    <p>Construimos agentes virtuales capaces de planificar, usar herramientas externas y ejecutar flujos
+                        complejos sin supervisión humana constante.</p>
                     <ul class="tech-features">
                         <li><i class="ph-fill ph-check-circle"></i> Asistentes de soporte L1/L2</li>
                         <li><i class="ph-fill ph-check-circle"></i> Agentes de investigación de datos</li>
                         <li><i class="ph-fill ph-check-circle"></i> Flujos multi-agente especializados</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary">Diseñar Agentes <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary">Diseñar Agentes <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
                 <div class="slide-left visual-panel">
                     <i class="ph-duotone ph-robot"></i>
@@ -185,36 +230,40 @@
         </section>
 
         <!-- SECCIÓN 6: AUTOMATIZACIÓN -->
-        <section class="tech-detail section-padding alt-bg">
+        <section class="tech-detail section-padding bg-white">
             <div class="container tech-detail__grid">
                 <div class="slide-right visual-panel">
                     <i class="ph-duotone ph-clock-counter-clockwise"></i>
                 </div>
                 <div class="slide-left tech-detail__content">
-                    <h2>Automatización de <span class="text-gradient">Procesos</span></h2>
-                    <p>Eliminamos las tareas repetitivas y propensas a errores. Conectamos sistemas dispersos para que la información fluya sin fricción en tiempo real.</p>
+                    <h2 class="animated-heading">Automatización de <span class="text-gradient">Procesos</span></h2>
+                    <p>Eliminamos las tareas repetitivas y propensas a errores. Conectamos sistemas dispersos para que
+                        la información fluya sin fricción en tiempo real.</p>
                     <ul class="tech-features">
                         <li><i class="ph-fill ph-check-circle"></i> RPA y flujos de trabajo programados</li>
                         <li><i class="ph-fill ph-check-circle"></i> Procesamiento automático de documentos</li>
                         <li><i class="ph-fill ph-check-circle"></i> Reducción de horas/hombre operativas</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary">Automatizar procesos <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary">Automatizar procesos <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 7: INTEGRACIÓN Y CLOUD -->
-        <section class="tech-detail section-padding">
+        <section class="tech-detail section-padding bg-dark">
             <div class="container tech-detail__grid">
                 <div class="slide-right tech-detail__content">
-                    <h2>Arquitectura <span class="text-gradient">Cloud & APIs</span></h2>
-                    <p>Diseñamos infraestructuras serverless, microservicios y despliegues multi-nube altamente disponibles. Conectamos el mundo a través de APIs robustas.</p>
+                    <h2 class="animated-heading">Arquitectura <span class="text-gradient">Cloud & APIs</span></h2>
+                    <p>Diseñamos infraestructuras serverless, microservicios y despliegues multi-nube altamente
+                        disponibles. Conectamos el mundo a través de APIs robustas.</p>
                     <ul class="tech-features">
                         <li><i class="ph-fill ph-check-circle"></i> AWS, Azure & Google Cloud</li>
                         <li><i class="ph-fill ph-check-circle"></i> Desarrollo de APIs REST & GraphQL</li>
                         <li><i class="ph-fill ph-check-circle"></i> Contenedores y Kubernetes</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary">Migrar a Cloud <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary">Migrar a Cloud <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
                 <div class="slide-left visual-panel">
                     <i class="ph-duotone ph-cloud"></i>
@@ -223,32 +272,40 @@
         </section>
 
         <!-- SECCIÓN 8: SEGURIDAD DESDE DISEÑO -->
-        <section class="tech-detail section-padding alt-bg">
+        <section class="tech-detail section-padding bg-surface">
             <div class="container tech-detail__grid">
                 <div class="slide-right visual-panel">
                     <i class="ph-duotone ph-shield-star"></i>
                 </div>
                 <div class="slide-left tech-detail__content">
-                    <h2>Seguridad <span class="text-gradient">Desde el Diseño</span></h2>
-                    <p>Adoptamos DevSecOps y el principio Zero Trust. La seguridad no es un añadido final, sino el núcleo sobre el que se construye toda nuestra arquitectura.</p>
+                    <h2 class="animated-heading">Seguridad <span class="text-gradient">Desde el Diseño</span></h2>
+                    <p>Adoptamos DevSecOps y el principio Zero Trust. La seguridad no es un añadido final, sino el
+                        núcleo sobre el que se construye toda nuestra arquitectura.</p>
                     <ul class="tech-features">
                         <li><i class="ph-fill ph-check-circle"></i> Arquitecturas Zero Trust</li>
                         <li><i class="ph-fill ph-check-circle"></i> Cifrado End-to-End</li>
                         <li><i class="ph-fill ph-check-circle"></i> Análisis continuo de vulnerabilidades</li>
                     </ul>
-                    <a href="./contacto.html" class="btn btn-secondary">Asegurar mi arquitectura <i class="ph ph-arrow-right"></i></a>
+                    <a href="./contacto.html" class="btn btn-secondary">Asegurar mi arquitectura <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 9: CTA FINAL -->
-        <section class="global-cta section-padding slide-up">
-            <div class="container text-center">
-                <h2>¿LISTO PARA ESCALAR TU TECNOLOGÍA?</h2>
-                <p style="margin-bottom: 2rem; color: var(--color-text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">Nuestro equipo de ingeniería está listo para construir la infraestructura que tu modelo de negocio demanda.</p>
-                <div class="cta-options" style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="./contacto.html" class="btn btn-primary"><i class="ph ph-whatsapp-logo"></i> Hablemos por WhatsApp</a>
-                    <a href="./contacto.html" class="btn btn-secondary"><i class="ph ph-envelope-simple"></i> Solicitar auditoría técnica</a>
+        <section class="global-cta section-padding bg-white slide-up">
+            <div class="container">
+                <h2 class="animated-heading">¿LISTO PARA ESCALAR TU TECNOLOGÍA?</h2>
+                <p
+                    style="margin-bottom: 2rem; color: var(--color-text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Nuestro equipo de ingeniería está listo para construir la infraestructura que tu modelo de negocio
+                    demanda.</p>
+                <div class="cta-options"
+                    style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="./contacto.html" class="btn btn-primary"><i class="ph ph-whatsapp-logo"></i> Hablemos por
+                        WhatsApp</a>
+                    <a href="./contacto.html" class="btn btn-secondary"><i class="ph ph-envelope-simple"></i> Solicitar
+                        auditoría técnica</a>
                 </div>
             </div>
         </section>
@@ -260,7 +317,7 @@
                 <!-- Columna 1: Branding y Social Proof -->
                 <div class="footer__brand">
                     <a href="./index.html" class="header__logo">
-                        <img src="./assets/images/LOGO.jpeg" alt="GRUPO VDG" class="brand-image footer-brand-image">
+                        <img src="./assets/images/IconoLogo.png" alt="GRUPO VDG" class="brand-image footer-brand-image">
                     </a>
                     <p class="footer__tagline">Soluciones tecnológicas para construir el futuro digital.</p>
                     <div class="footer__social">
@@ -297,14 +354,15 @@
                 <!-- Columna 4: Contacto & Insights -->
                 <div class="footer__col">
                     <h4 class="footer__title">Contacto & Insights</h4>
-                    
+
                     <!-- Newsletter -->
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Recibe insights tecnológicos</p>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Recibe insights
+                        tecnológicos</p>
                     <form class="footer__newsletter" onsubmit="event.preventDefault();">
                         <input type="email" placeholder="Tu correo electrónico" required>
                         <button type="submit"><i class="ph ph-paper-plane-right"></i></button>
                     </form>
-                    
+
                     <!-- Contacto Rápido -->
                     <div class="footer__links" style="margin-top: 1rem;">
                         <a href="./contacto.html"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a>
@@ -312,7 +370,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Bottom Bar: Copyright & Legal -->
             <div class="footer__bottom">
                 <p>© 2026 GRUPO VDG. Todos los derechos reservados.</p>
@@ -328,8 +386,9 @@
     <script src="./js/navigation.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/tecnologia.js"></script>
-    
+
     <!-- FAQ Bot Component -->
     <script src="./components/faq-bot/faq-bot.js"></script>
 </body>
+
 </html>

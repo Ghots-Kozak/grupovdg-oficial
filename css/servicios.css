@@ -5,7 +5,7 @@
 /* --- Page Hero --- */
 .page-header {
     padding: calc(100px + var(--spacing-xl)) 0 var(--spacing-lg);
-    background: radial-gradient(circle at top center, rgba(11, 92, 171, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle at top center, rgba(var(--color-primary-rgb), 0.15) 0%, transparent 60%);
     position: relative;
     overflow: hidden;
 }
@@ -18,8 +18,8 @@
     width: 200%;
     height: 200%;
     background-image: 
-        linear-gradient(rgba(11, 92, 171, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(11, 92, 171, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(var(--color-primary-rgb), 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(var(--color-primary-rgb), 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     z-index: -1;
     transform: perspective(500px) rotateX(60deg) translateY(-100px);
@@ -93,10 +93,12 @@
 }
 
 .service-features li:hover {
-    background: rgba(11, 92, 171, 0.1);
-    border-color: rgba(11, 92, 171, 0.3);
+    background: rgba(var(--color-primary-rgb), 0.1);
+    border-color: var(--color-primary);
     transform: translateX(10px);
-    box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+    box-shadow: -5px 5px 20px rgba(11, 92, 171, 0.15);
+    opacity: 1 !important;
+    filter: brightness(1.05);
 }
 
 .service-features li i {
@@ -121,16 +123,18 @@
     position: relative;
     font-size: 5.5rem;
     color: var(--color-primary);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), inset 0 0 40px rgba(11, 92, 171, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), inset 0 0 40px rgba(var(--color-primary-rgb), 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.5s ease;
 }
 
 .visual-placeholder:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.05) translateY(-8px);
     box-shadow: 0 30px 60px rgba(11, 92, 171, 0.15), inset 0 0 60px rgba(11, 92, 171, 0.4);
-    border-color: rgba(11, 92, 171, 0.4);
+    border-color: var(--color-primary);
+    opacity: 1 !important;
+    filter: brightness(1.05);
 }
 
 /* 1. Orbita (Software) */
@@ -139,15 +143,15 @@
     position: absolute;
     top: 10%; left: 10%; right: 10%; bottom: 10%;
     border-radius: 50%;
-    border: 2px dashed rgba(11, 92, 171, 0.3);
+    border: 2px dashed rgba(var(--color-primary-rgb), 0.3);
     animation: spin 20s linear infinite;
 }
 .orbit::after {
     top: 25%; left: 25%; right: 25%; bottom: 25%;
     animation-direction: reverse;
     animation-duration: 12s;
-    border: 1px solid rgba(11, 92, 171, 0.6);
-    box-shadow: 0 0 20px rgba(11, 92, 171, 0.2);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.6);
+    box-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.2);
 }
 
 /* 2. Cube (Consultoría) */
@@ -171,8 +175,8 @@
 }
 
 @keyframes pulseGlow {
-    0% { transform: scale(0.8); opacity: 0.8; box-shadow: 0 0 0 rgba(47, 128, 201, 0.8); }
-    100% { transform: scale(1.2); opacity: 0; box-shadow: 0 0 40px rgba(47, 128, 201, 0); }
+    0% { transform: scale(0.8); opacity: 0.8; box-shadow: 0 0 0 rgba(var(--color-accent-rgb), 0.8); }
+    100% { transform: scale(1.2); opacity: 0; box-shadow: 0 0 40px rgba(var(--color-accent-rgb), 0); }
 }
 
 /* 4. Radar (Ciberseguridad) */
@@ -185,7 +189,7 @@
     left: 50%;
     width: 100%;
     height: 100%;
-    background: conic-gradient(from 0deg, transparent 70%, rgba(47, 128, 201, 0.6) 100%);
+    background: conic-gradient(from 0deg, transparent 70%, rgba(var(--color-accent-rgb), 0.6) 100%);
     transform-origin: 0 0;
     animation: scan 4s linear infinite;
     mix-blend-mode: screen;
@@ -193,14 +197,14 @@
 
 /* 5. Neural (IA) */
 .neural {
-    background: radial-gradient(circle, rgba(11, 92, 171, 0.3) 0%, transparent 80%);
+    background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.3) 0%, transparent 80%);
 }
 .neural-nodes {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    box-shadow: inset 0 0 50px rgba(11, 92, 171, 0.3);
+    box-shadow: inset 0 0 50px rgba(var(--color-primary-rgb), 0.3);
     animation: breathe 4s ease-in-out infinite alternate;
 }
 
@@ -221,7 +225,7 @@
 /* --- CTA Selector Premium --- */
 .cta-premium-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
 }
@@ -255,10 +259,12 @@
 }
 
 .cta-premium-card:hover {
-    background: rgba(11, 92, 171, 0.05);
-    border-color: rgba(11, 92, 171, 0.3);
-    transform: translateY(-10px);
+    background: rgba(var(--color-primary-rgb), 0.05);
+    border-color: var(--color-primary);
+    transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(11, 92, 171, 0.15);
+    opacity: 1 !important;
+    filter: brightness(1.05);
 }
 
 .cta-premium-card:hover i {
@@ -287,4 +293,54 @@
     .service-features li {
         text-align: left;
     }
+
+    .visual-placeholder {
+        max-width: 200px;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* ==========================================================================
+   Fijes de Contraste para Fondo Oscuro (.bg-dark)
+   ========================================================================== */
+
+/* 1. Características (service-features) */
+.bg-dark .service-features li {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+.bg-dark .service-features li i {
+    color: var(--color-accent) !important;
+}
+
+/* 2. Visuales (visual-placeholder) */
+.bg-dark .visual-placeholder {
+    color: #FFFFFF !important;
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 40px rgba(255, 255, 255, 0.1);
+}
+.bg-dark .visual-placeholder i {
+    color: #FFFFFF !important;
+}
+
+/* 3. Tarjetas CTA Premium (cta-premium-card) */
+.bg-dark .cta-premium-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+.bg-dark .cta-premium-card i {
+    color: var(--color-accent);
+}
+.bg-dark .cta-premium-card:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    border-color: transparent;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(var(--color-primary-rgb), 0.4);
+}
+.bg-dark .cta-premium-card:hover i,
+.bg-dark .cta-premium-card:hover span {
+    color: #FFFFFF !important;
 }

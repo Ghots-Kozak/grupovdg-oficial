@@ -8,6 +8,19 @@
     <meta name="description"
         content="Desarrollamos soluciones de software, inteligencia artificial, automatización y seguridad para ayudar a las organizaciones a evolucionar en un entorno digital.">
 
+    <!-- Favicon e Iconos de Aplicación -->
+    <link rel="icon" type="image/png" href="./assets/images/IconoLogo.png">
+    <link rel="apple-touch-icon" href="./assets/images/IconoLogo.png">
+
+    <!-- Open Graph / SEO Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.grupovdg.com/">
+    <meta property="og:title" content="GRUPO VDG | Soluciones Tecnológicas, Software e Inteligencia Artificial">
+    <meta property="og:description" content="Desarrollamos soluciones de software, inteligencia artificial, automatización y seguridad para ayudar a las organizaciones a evolucionar en un entorno digital.">
+    <meta property="og:image" content="https://www.grupovdg.com/assets/images/IconoLogo.png">
+    <meta property="og:site_name" content="GRUPO VDG">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -19,9 +32,47 @@
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="stylesheet" href="./css/home.css">
-    
+
     <!-- FAQ Bot -->
     <link rel="stylesheet" href="./components/faq-bot/faq-bot.css">
+
+    <!-- Datos Estructurados / Schema Markup para Google Knowledge Graph -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "GRUPO VDG",
+        "alternateName": ["Grupo VDG", "VDG", "GrupoVDG"],
+        "url": "https://www.grupovdg.com/",
+        "logo": "https://www.grupovdg.com/assets/images/IconoLogo.png",
+        "description": "Firma tecnológica especializada en desarrollo de software a la medida, ciberseguridad, integración de inteligencia artificial y automatización de procesos empresariales.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+52-56-5986-5944",
+          "contactType": "customer service",
+          "email": "victor.castro@grupovdg.com",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/grupovdg",
+          "https://twitter.com/grupovdg"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "GRUPO VDG | Soluciones Tecnológicas e Inteligencia Artificial",
+        "url": "https://www.grupovdg.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.grupovdg.com/servicios.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+    </script>
 </head>
 
 <body>
@@ -39,7 +90,7 @@
         </div>
         <div class="container header__nav">
             <a href="./index.html" class="header__logo">
-                <img src="./assets/images/LOGO.jpeg" alt="GRUPO VDG" class="brand-image">
+                <img src="./assets/images/IconoLogo.png" alt="GRUPO VDG" class="brand-image">
             </a>
 
             <div class="header__toggle">
@@ -59,13 +110,14 @@
     <main>
         <!-- SECCIÓN 1: HERO -->
         <section class="hero section-padding">
-            <div class="container hero__content text-center">
+            <div class="container hero__content">
                 <div class="hero__badge slide-up delay-100">Soluciones Tecnológicas</div>
                 <h1 class="slide-up delay-200">
                     TECNOLOGÍA QUE <span class="text-gradient">TRANSFORMA</span> <br> IDEAS EN SOLUCIONES.
                 </h1>
                 <p class="hero__subtitle slide-up delay-300">
-                    Desarrollamos soluciones de software, inteligencia artificial, automatización y seguridad para ayudar a las organizaciones a evolucionar en un entorno digital.
+                    Desarrollamos soluciones de software, inteligencia artificial, automatización y seguridad para
+                    ayudar a las organizaciones a evolucionar en un entorno digital.
                 </p>
                 <div class="hero__actions slide-up delay-400">
                     <a href="./contacto.html" class="btn btn-primary">
@@ -79,11 +131,13 @@
         </section>
 
         <!-- SECCIÓN 2: PROPUESTA DE VALOR -->
-        <section class="value-prop section-padding alt-bg">
-            <div class="container text-center">
-                <h2 class="slide-up">TECNOLOGÍA PENSADA PARA RESOLVER PROBLEMAS <span class="text-gradient">REALES</span>.</h2>
-                <p class="slide-up delay-100 subtitle">No buscamos simplemente desarrollar software, sino entender las necesidades de nuestros clientes para construir soluciones útiles, escalables y sostenibles.</p>
-                
+        <section class="value-prop section-padding bg-surface">
+            <div class="container">
+                <h2 class="animated-heading">TECNOLOGÍA PENSADA PARA RESOLVER PROBLEMAS <span
+                        class="text-gradient">REALES</span>.</h2>
+                <p class="slide-up delay-100 subtitle">No buscamos simplemente desarrollar software, sino entender las
+                    necesidades de nuestros clientes para construir soluciones útiles, escalables y sostenibles.</p>
+
                 <div class="home-value-grid slide-up delay-200">
                     <div class="home-value-card">
                         <div class="home-value-icon">
@@ -118,18 +172,19 @@
                         <p>Acompañamos el crecimiento de tu tecnología.</p>
                     </div>
                 </div>
-                
-                <div class="text-center slide-up delay-400" style="margin-top: 3rem;">
-                    <a href="./contacto.html" class="btn btn-secondary">Cuéntanos qué necesitas resolver <i class="ph ph-arrow-right"></i></a>
+
+                <div class="slide-up delay-400" style="margin-top: 3rem;">
+                    <a href="./contacto.html" class="btn btn-secondary">Cuéntanos qué necesitas resolver <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 3: SERVICIOS -->
-        <section class="services section-padding">
-            <div class="container text-center">
-                <h2 class="slide-up">SOLUCIONES PARA CADA <span class="text-gradient">RETO TECNOLÓGICO</span>.</h2>
-                
+        <section class="services section-padding bg-white">
+            <div class="container">
+                <h2 class="animated-heading">SOLUCIONES PARA CADA <span class="text-gradient">RETO TECNOLÓGICO</span>.</h2>
+
                 <div class="services-grid slide-up delay-100">
                     <div class="service-card delay-100">
                         <i class="ph-duotone ph-terminal-window"></i>
@@ -168,53 +223,56 @@
                     </div>
                 </div>
 
-                <div class="text-center slide-up delay-200" style="margin-top: 3rem;">
-                    <a href="./servicios.html" class="btn btn-secondary">Explora nuestras soluciones <i class="ph ph-arrow-right"></i></a>
+                <div class="slide-up delay-200" style="margin-top: 3rem;">
+                    <a href="./servicios.html" class="btn btn-secondary">Explora nuestras soluciones <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 4: QUÉ PODEMOS RESOLVER -->
-        <section class="problems section-padding alt-bg">
-            <div class="container text-center">
-                <h2 class="slide-up" style="margin-bottom: 3rem;">¿QUÉ PODEMOS <span class="text-gradient">RESOLVER</span>?</h2>
+        <section class="problems section-padding bg-dark">
+            <div class="container">
+                <h2 class="animated-heading" style="margin-bottom: 3rem;">¿QUÉ PODEMOS <span
+                        class="text-gradient">RESOLVER</span>?</h2>
                 <div class="problems-grid slide-up delay-100">
                     <div class="problem-card delay-100">
-                        <i class="ph-duotone ph-warning-circle"></i> 
+                        <i class="ph-duotone ph-warning-circle"></i>
                         <span>¿Tu empresa utiliza procesos manuales que consumen tiempo?</span>
                     </div>
                     <div class="problem-card delay-200">
-                        <i class="ph-duotone ph-warning-circle"></i> 
+                        <i class="ph-duotone ph-warning-circle"></i>
                         <span>¿Necesitas un sistema personalizado que no existe en el mercado?</span>
                     </div>
                     <div class="problem-card delay-300">
-                        <i class="ph-duotone ph-warning-circle"></i> 
+                        <i class="ph-duotone ph-warning-circle"></i>
                         <span>¿Quieres automatizar tareas repetitivas?</span>
                     </div>
                     <div class="problem-card delay-400">
-                        <i class="ph-duotone ph-warning-circle"></i> 
+                        <i class="ph-duotone ph-warning-circle"></i>
                         <span>¿Necesitas fortalecer tu seguridad digital corporativa?</span>
                     </div>
                     <div class="problem-card delay-500">
-                        <i class="ph-duotone ph-warning-circle"></i> 
+                        <i class="ph-duotone ph-warning-circle"></i>
                         <span>¿Buscas incorporar inteligencia artificial a tus operaciones?</span>
                     </div>
                     <div class="problem-card delay-600">
-                        <i class="ph-duotone ph-warning-circle"></i> 
+                        <i class="ph-duotone ph-warning-circle"></i>
                         <span>¿Tienes sistemas que necesitan modernizarse o integrarse?</span>
                     </div>
                 </div>
-                <div class="text-center slide-up delay-200" style="margin-top: 3rem;">
+                <div class="slide-up delay-200" style="margin-top: 3rem;">
                     <a href="./contacto.html" class="btn btn-primary">Cuéntanos tu reto</a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 5: ENFOQUE -->
-        <section class="approach section-padding">
-            <div class="container text-center">
-                <h2 class="slide-up">UN PROCESO CLARO PARA CONSTRUIR <span class="text-gradient">MEJORES SOLUCIONES</span>.</h2>
-                
+        <section class="approach section-padding bg-surface">
+            <div class="container">
+                <h2 class="animated-heading">UN PROCESO CLARO PARA CONSTRUIR <span class="text-gradient">MEJORES
+                        SOLUCIONES</span>.</h2>
+
                 <div class="timeline-premium slide-up delay-100">
                     <div class="timeline-node delay-100">
                         <div class="timeline-dot">01</div>
@@ -243,17 +301,19 @@
                     </div>
                 </div>
 
-                <div class="text-center slide-up delay-200" style="margin-top: 3rem;">
-                    <a href="./contacto.html" class="btn btn-secondary">¿Tienes un proyecto en mente? <i class="ph ph-arrow-right"></i></a>
+                <div class="slide-up delay-200" style="margin-top: 3rem;">
+                    <a href="./contacto.html" class="btn btn-secondary">¿Tienes un proyecto en mente? <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 6: CALIDAD Y SEGURIDAD -->
-        <section class="quality section-padding alt-bg">
-            <div class="container text-center">
-                <h2 class="slide-up">DESARROLLO CON CALIDAD, SEGURIDAD Y <span class="text-gradient">VISIÓN DE FUTURO</span>.</h2>
-                
+        <section class="quality section-padding bg-white">
+            <div class="container">
+                <h2 class="animated-heading">DESARROLLO CON CALIDAD, SEGURIDAD Y <span class="text-gradient">VISIÓN DE
+                        FUTURO</span>.</h2>
+
                 <div class="quality-badges slide-up delay-100">
                     <div class="quality-badge delay-100"><i class="ph-duotone ph-code"></i> Calidad de código</div>
                     <div class="quality-badge delay-200"><i class="ph-duotone ph-shield-check"></i> Seguridad</div>
@@ -263,17 +323,18 @@
                     <div class="quality-badge delay-600"><i class="ph-duotone ph-users"></i> Experiencia</div>
                 </div>
 
-                <div class="text-center slide-up delay-200" style="margin-top: 3rem;">
-                    <a href="./nosotros.html" class="btn btn-secondary">Conoce cómo trabajamos <i class="ph ph-arrow-right"></i></a>
+                <div class="slide-up delay-200" style="margin-top: 3rem;">
+                    <a href="./nosotros.html" class="btn btn-secondary">Conoce cómo trabajamos <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 7: TECNOLOGÍA + IA -->
-        <section class="tech section-padding">
-            <div class="container text-center">
-                <h2 class="slide-up">LA TECNOLOGÍA EVOLUCIONA. <span class="text-gradient">NOSOTROS TAMBIÉN.</span></h2>
-                
+        <section class="tech section-padding bg-surface">
+            <div class="container">
+                <h2 class="animated-heading">LA TECNOLOGÍA EVOLUCIONA. <span class="text-gradient">NOSOTROS TAMBIÉN.</span></h2>
+
                 <div class="tech-cloud slide-up delay-100">
                     <div class="tech-tag delay-100">Inteligencia Artificial</div>
                     <div class="tech-tag delay-200">Automatización</div>
@@ -284,17 +345,19 @@
                     <div class="tech-tag delay-200">Seguridad</div>
                 </div>
 
-                <div class="text-center slide-up delay-200" style="margin-top: 3rem;">
-                    <a href="./tecnologia.html" class="btn btn-secondary">Explora nuestras soluciones tecnológicas <i class="ph ph-arrow-right"></i></a>
+                <div class="slide-up delay-200" style="margin-top: 3rem;">
+                    <a href="./tecnologia.html" class="btn btn-secondary">Explora nuestras soluciones tecnológicas <i
+                            class="ph ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN 8: CTA PRINCIPAL -->
-        <section class="global-cta section-padding alt-bg slide-up">
+        <section class="global-cta section-padding bg-white slide-up">
             <div class="container">
-                <h2>¿TIENES UN RETO TECNOLÓGICO?</h2>
-                <p style="margin-bottom: var(--spacing-md); color: rgba(255, 255, 255, 0.7);">Cuéntanos qué necesitas. Analicemos juntos cómo convertirlo en una solución.</p>
+                <h2 class="animated-heading">¿TIENES UN RETO TECNOLÓGICO?</h2>
+                <p style="margin-bottom: var(--spacing-md); color: var(--color-text-muted);">Cuéntanos qué necesitas.
+                    Analicemos juntos cómo convertirlo en una solución.</p>
                 <div class="cta-options">
                     <a href="./contacto.html" class="btn btn-primary">
                         <i class="ph ph-chat-teardrop-text"></i>
@@ -311,7 +374,7 @@
                 <!-- Columna 1: Branding y Social Proof -->
                 <div class="footer__brand">
                     <a href="./index.html" class="header__logo">
-                        <img src="./assets/images/LOGO.jpeg" alt="GRUPO VDG" class="brand-image footer-brand-image">
+                        <img src="./assets/images/IconoLogo.png" alt="GRUPO VDG" class="brand-image footer-brand-image">
                     </a>
                     <p class="footer__tagline">Soluciones tecnológicas para construir el futuro digital.</p>
                     <div class="footer__social">
@@ -348,14 +411,15 @@
                 <!-- Columna 4: Contacto & Insights -->
                 <div class="footer__col">
                     <h4 class="footer__title">Contacto & Insights</h4>
-                    
+
                     <!-- Newsletter -->
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Recibe insights tecnológicos</p>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">Recibe insights
+                        tecnológicos</p>
                     <form class="footer__newsletter" onsubmit="event.preventDefault();">
                         <input type="email" placeholder="Tu correo electrónico" required>
                         <button type="submit"><i class="ph ph-paper-plane-right"></i></button>
                     </form>
-                    
+
                     <!-- Contacto Rápido -->
                     <div class="footer__links" style="margin-top: 1rem;">
                         <a href="./contacto.html"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a>
@@ -363,7 +427,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Bottom Bar: Copyright & Legal -->
             <div class="footer__bottom">
                 <p>© 2026 GRUPO VDG. Todos los derechos reservados.</p>
@@ -382,4 +446,5 @@
     <!-- FAQ Bot Component -->
     <script src="./components/faq-bot/faq-bot.js"></script>
 </body>
+
 </html>

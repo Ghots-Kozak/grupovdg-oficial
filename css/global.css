@@ -3,47 +3,66 @@
    ========================================================================== */
 :root {
     /* Paleta Corporativa (Azul VDG) */
-    --color-background: #FFFFFF;       
-    --color-surface: #F5F8FC;          
-    --color-surface-elevated: #EEF4F9; 
-    
-    --color-primary: #0B5CAB;          
-    --color-secondary: #0D2A52;        
-    --color-accent: #2F80C9;           
-    --color-dark: #102A43;             
-    
-    --color-text: #172033;             
-    --color-text-muted: #536174;       
+    --color-background: #FFFFFF;
+    --color-surface: #F5F8FC;
+    --color-surface-elevated: #EEF4F9;
+
+    /* Variables Base de Color */
+    --color-primary: #0B5CAB;
+    --color-secondary: #0D2A52;
+    --color-accent: #2F80C9;
+
+    /* Descomposición RGB para manipulación de Canal Alfa (RGBA) */
+    --color-primary-rgb: 11, 92, 171;
+    --color-accent-rgb: 47, 128, 201;
+
+    /* Variables específicas para Glassmorphism (Light Mode) */
+    --glass-bg: rgba(0, 0, 0, 0.02);
+    --glass-border: rgba(0, 0, 0, 0.08);
+
+    /* Textos y Bordes Generales */
+    --color-dark: #102A43;
+    --color-text: #172033;
+    --color-text-muted: #536174;
     --color-border: #DCE5EF;
-    
-    /* Espaciados */
-    --spacing-xs: 0.5rem;   /* 8px */
-    --spacing-sm: 1rem;     /* 16px */
-    --spacing-md: 2rem;     /* 32px */
-    --spacing-lg: 4rem;     /* 64px */
-    --spacing-xl: 8rem;     /* 128px */
-    
-    /* Bordes y Radios */
+
+    /* Sistema de Espaciados (Valores por defecto para Móvil) */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    /* Reducido de 8rem a 4rem para evitar exceso de aire en móvil */
+
+    /* Bordes, Radios y Transiciones */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 16px;
     --radius-full: 9999px;
-    
-    /* Transiciones */
     --transition-fast: 0.15s ease-out;
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    /* Z-index */
+
+    /* Z-index unificados */
     --z-header: 100;
     --z-modal: 200;
     --z-floating: 300;
 }
 
+/* Reescalado de espaciados exclusivos para Desktop */
+@media (min-width: 768px) {
+    :root {
+        --spacing-lg: 4rem;
+        --spacing-xl: 8rem;
+    }
+}
+
 /* ==========================================================================
    Reset y Configuración Base
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -61,11 +80,17 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden; /* Prevenir scroll horizontal indeseado */
+    overflow-x: hidden;
+    /* Prevenir scroll horizontal indeseado */
 }
 
 /* Tipografía Base */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     line-height: 1.2;
     font-weight: 800;
     color: var(--color-text);
@@ -73,13 +98,23 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
 
 p {
     margin-bottom: var(--spacing-sm);
     color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 a {
@@ -87,17 +122,22 @@ a {
     text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-img, svg {
+img,
+svg {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
     font: inherit;
     color: inherit;
     border: none;
@@ -109,9 +149,9 @@ button, input, textarea, select {
    ========================================================================== */
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1536px;
     margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
 }
 
 .section-padding {
@@ -128,10 +168,79 @@ button, input, textarea, select {
 
 /* Accesibilidad - Reducir animaciones si el usuario lo prefiere */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* Ajuste de kerning para jerarquía premium */
+h1,
+h2 {
+    letter-spacing: -0.03em;
+}
+
+/* Feedback visual unificado para accesibilidad por teclado */
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+@media (min-width: 1536px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================================
+   Sistema de Color Blocking (FASE 1)
+   ========================================================================== */
+/* 1. Fondo Claro / Blanco */
+.bg-white {
+    background-color: #FFFFFF;
+    color: var(--color-text);
+}
+.bg-white h2, .bg-white h3, .bg-white .animated-heading { color: var(--color-text); }
+.bg-white .card-component { background: rgba(0, 0, 0, 0.02); border-color: rgba(0, 0, 0, 0.08); }
+
+/* 2. Fondo Superficie (Azul Hielo) */
+.bg-surface {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+.bg-surface h2, .bg-surface h3, .bg-surface .animated-heading { color: var(--color-text); }
+.bg-surface .card-component { background: #FFFFFF; border-color: rgba(11, 92, 171, 0.1); }
+
+/* 3. Fondo Oscuro Corporativo */
+.bg-dark {
+    background-color: var(--color-secondary);
+    color: rgba(255, 255, 255, 0.85);
+}
+/* Forzar contraste en elementos internos sobre fondo oscuro */
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark .animated-heading { 
+    color: #FFFFFF !important; 
+}
+.bg-dark .text-muted, .bg-dark p { 
+    color: rgba(255, 255, 255, 0.7) !important; 
+}
+/* Tarjetas sobre fondo oscuro */
+.bg-dark .home-value-card, .bg-dark .service-card, .bg-dark .problem-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botones sobre fondo oscuro */
+.bg-dark .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #FFFFFF !important;
+    background-color: transparent;
+}
+.bg-dark .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #FFFFFF;
 }
